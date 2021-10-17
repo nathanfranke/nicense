@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/example.png-268399f716e416f0acde4f86de99b856.stex"
+path="res://.import/control.svg-f9fb59f92174711090083c3fb6c04fec.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/nicense/example.png"
-dest_files=[ "res://.import/example.png-268399f716e416f0acde4f86de99b856.stex" ]
+source_file="res://addons/nicense/control.svg"
+dest_files=[ "res://.import/control.svg-f9fb59f92174711090083c3fb6c04fec.stex" ]
 
 [params]
 

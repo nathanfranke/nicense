@@ -8,10 +8,10 @@
 script = ExtResource( 3 )
 
 [node name="NicenseButton" type="Button" parent="."]
-margin_left = 224.0
-margin_top = 109.0
-margin_right = 397.0
-margin_bottom = 160.0
+margin_left = 200.0
+margin_top = 200.0
+margin_right = 373.0
+margin_bottom = 251.0
 theme = ExtResource( 2 )
 text = "Show Copyright"
 script = ExtResource( 1 )
