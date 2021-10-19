@@ -100,3 +100,31 @@ func _init():
 	
 	for item in Engine.get_license_info():
 		_licenses.push_back(License.new(item, Engine.get_license_info()[item]))
+
+func _copyright_print(title: String, text: String) -> void:
+	print(title, ":")
+	
+	# Indent text
+	text = "\t" + text.replace("\n", "\n\t")
+	print(text)
+	
+	print("\n\n")
+
+func _ready() -> void:
+	print("Run with '--copyright' for copyright information.")
+	
+	if "--copyright" in OS.get_cmdline_args():
+		print("{0} BEGIN COPYRIGHT {0}\n\n\n".format(["-".repeat(20)]))
+		
+		for item in get_products():
+			_copyright_print(item.title, item.text)
+		
+		print("{0} BEGIN LICENSES {0}\n\n\n".format(["-".repeat(20)]))
+		
+		for item in get_licenses():
+			_copyright_print(item.title, item.text)
+		
+		# Exit as silently as possible.
+		Engine.print_error_messages = false
+		ProjectSettings.set("debug/settings/stdout/print_fps", false)
+		get_tree().quit()
