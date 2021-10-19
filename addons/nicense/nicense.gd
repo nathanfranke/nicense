@@ -64,7 +64,7 @@ var _products := []
 var _licenses := []
 
 func add_product(product: Product) -> void:
-	_custom_products.push_front(product)
+	_custom_products.push_back(product)
 	_make_dirty()
 
 func add_license(license: License) -> void:
@@ -73,7 +73,7 @@ func add_license(license: License) -> void:
 	for v in _licenses:
 		assert(v.title != license.title, "Built-in license already exists.")
 	
-	_custom_licenses.push_front(license)
+	_custom_licenses.push_back(license)
 	_make_dirty()
 
 func get_products() -> Array:
